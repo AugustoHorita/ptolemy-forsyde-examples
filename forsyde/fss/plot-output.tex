@@ -1,0 +1,14 @@
+\documentclass[tikz,margin=2mm]{standalone}
+\usepackage{pgfplots}
+
+\pgfplotsset{major grid style={color=black!15}}
+
+\begin{document}
+
+\begin{tikzpicture}[]
+\begin{axis}[ylabel={dB},xlabel={Samples}, grid = major]
+ \addplot[blue] table [x expr=\coordindex, y index=0] {OutputSignal.txt};
+\end{axis}
+\end{tikzpicture}
+
+\end{document}
